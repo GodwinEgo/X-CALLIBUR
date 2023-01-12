@@ -1,0 +1,10 @@
+@media (max-width: 500px) {
+  .navbar {
+    display: grid;
+  }
+
+  .navbar ul {
+    text-align: left;
+    display: grid;
+  }
+}
