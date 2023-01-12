@@ -5,9 +5,64 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:roots {
+  --ButtonFontSize: 17px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  transition: background-color 1s ease;
+  background-color: #1b76ff;
+  margin: 0;
+  padding: 0 5%;
+  position: fixed;
+  text-align: center;
+  top: 0%;
+  width: 100%;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%;
+}
+
+.navbar .logo a {
+  font-size: 50px;
+  font-family: Agency FB;
+  color: white;
+}
+
+.navbar ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul li a {
+  color: black;
+  font-size: var(--ButtonFontSize);
+}
+
+.inverted {
+  background-color: #fff;
+  box-shadow: 0 3px 5px 0.3px rgba(0, 0, 0, 0.1);
+  height: 7vh;
+}
+
+.inverted .navbar .logo a {
+  color: #1b76ff;
+}
+
+main {
+  height: 100vh;
 }
