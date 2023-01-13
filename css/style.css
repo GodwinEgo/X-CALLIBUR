@@ -56,7 +56,7 @@ header {
 .inverted {
   background-color: #fff;
   box-shadow: 0 3px 5px 0.3px rgba(0, 0, 0, 0.1);
-  height: 7vh;
+  height: auto;
 }
 
 .inverted .navbar .logo a {
@@ -91,6 +91,7 @@ main {
   font-size: 20px;
   color: white;
   font-weight: bolder;
+  box-shadow: 2px 2px 10px #bebfc0;
 }
 
 #button:hover {
@@ -100,9 +101,15 @@ main {
   box-shadow: 2px 2px 10px #1b76ff;
 }
 
-#button .show {
+#button.show {
   opacity: 1;
   visibility: visible;
+}
+
+#button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*===================HOVER ANIMATION=======================*/
@@ -134,3 +141,189 @@ main {
 .inverted .hover-underline-animation::after {
   background-color: #1b76ff;
 }
+
+/*=================PRELOADER STARTS=================*/
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #1b76ff;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 2001;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #5093f8;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 4s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #96bffd;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2.5s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@keyframes spin {
+  0% {
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+
+  100% {
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #fff;
+  z-index: 2000;
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(0);
+  /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(100%);
+  /* Firefox 16+, IE 10+, Opera */
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateY(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  transition: all 0.3s 1s ease-out;
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+  display: none;
+}
+
+/*=================PRELOADER ENDS=================*/
+/*===================FOOTER STARTS===================*/
+footer {
+  height: 50vh;
+  background-color: #1b76ff;
+  width: 100%;
+  display: flex;
+  padding: 0;
+}
+
+.foot {
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  margin-top: 5vh;
+  justify-content: space-between;
+}
+
+.foot .get-in-touch {
+  color: white;
+  text-align: left;
+  padding-right: 2%;
+}
+
+.foot .get-in-touch .company {
+  font-weight: bolder;
+  font-family: fantasy;
+}
+
+.foot .quick-links {
+  color: white;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.foot .quick-links .link {
+  color: white;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.foot .quick-links .link a {
+  color: white;
+}
+
+.foot hr {
+  text-align: left;
+  width: 20%;
+  color: white;
+  margin-left: 0;
+  height: 2px;
+  background-color: white;
+}
+
+/*===================FOOTER ENDS===================*/

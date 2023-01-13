@@ -1,3 +1,4 @@
+
 /*======================HEADER BACKGROUND===================== */
 var className = 'inverted';
 var scrollTrigger = 60;
@@ -37,19 +38,10 @@ btn.on( 'click', function ( e )
 } );
 
 
-// Back to top button
-$( window ).scroll( function ()
+
+/*====================PRE-LOADER================== */
+$( window ).on( 'load', function ()
 {
-  if ( $( this ).scrollTop() > 100 )
-  {
-    $( '#button' ).fadeIn( 'slow' );
-  } else
-  {
-    $( '#button' ).fadeOut( 'slow' );
-  }
-} );
-$( '#button' ).click( function ()
-{
-  $( 'html, body' ).animate( { scrollTop: 0 }, 1500, 'easeInOutExpo' );
-  return false;
+  $( 'body' ).addClass( 'loaded' );
+  openPage( 1 );
 } );
