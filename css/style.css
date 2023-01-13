@@ -26,6 +26,7 @@ header {
   text-align: center;
   top: 0%;
   width: 100%;
+  z-index: 4;
 }
 
 .navbar {
@@ -69,6 +70,43 @@ header {
 
 main {
   height: 200vh;
+  margin-top: 7vh;
+}
+
+main .hero-area {
+  width: 100%;
+  text-align: center;
+  height: 80vh;
+  position: relative;
+}
+
+main .hero-area p {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+main .hero-area video {
+  width: 100%;
+}
+
+main .hero-area h1 {
+  font-size: 50px;
+}
+
+main .hero-area .trusted {
+  color: white;
+  background-color: rgba(57, 56, 56, 0.65);
+  height: 110vh;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*=================BACK TO TOP=====================*/
@@ -274,7 +312,7 @@ main {
 
 /*=================PRELOADER ENDS=================*/
 /*===================FOOTER STARTS===================*/
-footer {
+.footer {
   height: 50vh;
   background-color: #1b76ff;
   width: 100%;
@@ -287,10 +325,10 @@ footer {
   margin-left: 15%;
   display: flex;
   margin-top: 5vh;
-  justify-content: space-between;
 }
 
 .foot .get-in-touch {
+  width: 33.33%;
   color: white;
   text-align: left;
   padding-right: 2%;
@@ -302,6 +340,7 @@ footer {
 }
 
 .foot .quick-links {
+  width: 33.33%;
   color: white;
   text-align: left;
   padding-left: 2%;
@@ -315,6 +354,33 @@ footer {
 
 .foot .quick-links .link a {
   color: white;
+  transition: all ease-in-out 500ms;
+}
+
+.foot .quick-links .link a:hover {
+  text-decoration: underline;
+  transform-origin: bottom right;
+}
+
+.foot .about-xcallibur {
+  width: 33.33%;
+  color: white;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.foot .about-xcallibur .link {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.foot .about-xcallibur .link a {
+  color: white;
+  transition: 500ms al ease-in-out;
+}
+
+.foot .about-xcallibur .link a:hover {
+  text-decoration: underline;
 }
 
 .foot hr {
