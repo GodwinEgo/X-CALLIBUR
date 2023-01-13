@@ -109,6 +109,22 @@ main .hero-area .trusted {
   align-items: center;
 }
 
+main .hero-area .trusted .read-more {
+  background-color: #1b76ff;
+  padding: 3vh 7vh;
+  border: 1px solid transparent;
+  color: white;
+  font-size: var(--ButtonFontSize);
+  border-radius: 5vh;
+  cursor: pointer;
+  transition: all ease-in-out 500ms;
+}
+
+main .hero-area .trusted .read-more:hover {
+  background-color: transparent;
+  box-shadow: 6px 6px 10px 5px #1b76ff;
+}
+
 /*=================BACK TO TOP=====================*/
 #button {
   display: flex;
@@ -332,6 +348,10 @@ main .hero-area .trusted {
   color: white;
   text-align: left;
   padding-right: 2%;
+}
+
+.foot .get-in-touch a {
+  color: white;
 }
 
 .foot .get-in-touch .company {
