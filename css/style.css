@@ -538,7 +538,7 @@ main .hero-area .trusted .read-more:hover {
   text-align: center;
   width: 70%;
   margin-left: 15%;
-  margin-bottom: 40vh;
+  margin-bottom: 20vh;
 }
 
 .work-card {
@@ -550,7 +550,7 @@ main .hero-area .trusted .read-more:hover {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin-top: 15vh;
+  margin-top: 10vh;
   box-shadow: 5px 10px 15px #222222;
 }
 
@@ -608,3 +608,76 @@ a.learn-more {
 }
 
 /*===================WORKING ENDS===================*/
+.about {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.about_about {
+  display: flex;
+  width: 60%;
+  margin-left: 20%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7vh;
+}
+
+.about .sub-about {
+  line-height: 2;
+  width: 40%;
+}
+
+.about .management-card {
+  width: 40%;
+  background-color: #1a5d7a;
+  color: white;
+  padding: 2rem;
+  box-shadow: 2px 7px 10px gray;
+}
+
+.services {
+  height: 66vh;
+  width: 100%;
+  background-color: #1a5d7a;
+  color: white;
+  margin-top: -5vh;
+}
+
+.services h1 {
+  color: white;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.service_service {
+  display: grid;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10vh;
+  margin-bottom: 8vh;
+  gap: 5vh;
+}
+
+.service {
+  display: flex;
+}
+
+.service i {
+  font-size: 40px;
+}
+
+.service_heading {
+  display: flex;
+  gap: 1rem;
+}
+
+.service_1 {
+  display: grid;
+}
+
+.service_1 p.text-muted {
+  font-size: 13px;
+}
