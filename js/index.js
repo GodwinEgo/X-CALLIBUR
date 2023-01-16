@@ -45,3 +45,15 @@ $( window ).on( 'load', function ()
   $( 'body' ).addClass( 'loaded' );
   openPage( 1 );
 } );
+/*====================MENU-ICON====================*/
+function myFunction ( x )
+{
+  x.classList.toggle( "change" );
+}
+$( document ).ready( function ()
+{
+  $( ".menu-icon" ).click( function ()
+  {
+    $( "#nav-list" ).slideToggle();
+  } );
+} );

@@ -1,10 +1,45 @@
 @media (max-width: 500px) {
+  .navbar ul {
+    display: none;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    padding: 10% 30%;
+  }
+
+  header {
+    margin: 0;
+    padding: 0;
+  }
+
   .navbar {
+    margin: 0 !important;
+    padding: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-icon {
+    display: inline-block;
+  }
+
+  .navbar .logo img {
+    width: 60%;
+  }
+
+  footer {
     display: grid;
   }
 
-  .navbar ul {
-    text-align: left;
+  .foot {
     display: grid;
+    line-height: 2;
+  }
+
+  .foot .quick-links {
+    display: none;
   }
 }

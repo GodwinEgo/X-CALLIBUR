@@ -25,6 +25,15 @@ body {
   --ButtonFontSize: 17px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: ButtonFont;
+}
+
 a {
   text-decoration: none;
 }
@@ -37,6 +46,7 @@ header {
   transition: background-color 1s ease;
   background-color: #fff;
   margin: 0;
+  height: auto;
   padding: 0 5%;
   position: fixed;
   text-align: center;
@@ -49,6 +59,46 @@ header {
   display: flex;
   align-items: center;
   width: 90%;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  top: 2rem;
+  right: 2rem;
+  position: absolute;
+  z-index: 10000;
+}
+
+.bar1,
+.bar3 {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #02adf3;
+  margin: 6px 0;
+  transition: 1s;
+}
+
+.bar2 {
+  width: 3.3rem;
+  height: 0.3rem;
+  background-color: #1a5d7a;
+  opacity: 0.7;
+  margin: 6px 0;
+  transition: 1s;
+}
+
+/*------ROTATE BARs-----*/
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-9px, -6px);
 }
 
 .navbar .logo img {
@@ -70,16 +120,6 @@ header {
   font-size: var(--ButtonFontSize);
 }
 
-.inverted {
-  background-color: #02adf3;
-  box-shadow: 0 3px 5px 0.3px rgba(0, 0, 0, 0.1);
-  height: auto;
-}
-
-.inverted .navbar ul li a {
-  color: #fff;
-}
-
 main {
   height: 200vh;
   margin-top: 7vh;
@@ -88,8 +128,9 @@ main {
 main .hero-area {
   width: 100%;
   text-align: center;
-  height: 80vh;
+  height: 100vh;
   position: relative;
+  z-index: 1;
 }
 
 main .hero-area p {
@@ -97,7 +138,14 @@ main .hero-area p {
   font-weight: 100;
 }
 
-main .hero-area video {}
+main .hero-area video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: 1;
+}
 
 main .hero-area h1 {
   font-size: 50px;
@@ -106,7 +154,7 @@ main .hero-area h1 {
 main .hero-area .trusted {
   color: white;
   background-color: rgba(57, 56, 56, 0.65);
-  height: 110vh;
+  height: 100%;
   position: absolute;
   width: 100%;
   top: 0;
@@ -177,10 +225,15 @@ main .hero-area .trusted .read-more:hover {
 }
 
 /*===================HOVER ANIMATION=======================*/
-.hover-underline-animation {
+.hover-underline-animation,
+.hover-underline-animation-active {
   display: inline-block;
   position: relative;
   color: #02adf3;
+}
+
+.navbar ul li a.active {
+  color: #1a5d7a;
 }
 
 .hover-underline-animation:after {
@@ -197,13 +250,24 @@ main .hero-area .trusted .read-more:hover {
   transition: transform 0.5s ease-out;
 }
 
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.hover-underline-animation-active:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  top: 25px;
+  left: 0;
+  background-color: #1a5d7a;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
 }
 
-.inverted .hover-underline-animation::after {
-  background-color: #fff;
+.hover-underline-animation:hover:after,
+.hover-underline-animation-active:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /*=================PRELOADER STARTS=================*/
@@ -339,11 +403,11 @@ main .hero-area .trusted .read-more:hover {
 /*=================PRELOADER ENDS=================*/
 /*===================FOOTER STARTS===================*/
 .footer {
-  height: 50vh;
+  height: auto;
   background-color: #02adf3;
   width: 100%;
   display: flex;
-  padding: 0;
+  padding: 3% 0;
 }
 
 .foot {
@@ -351,10 +415,11 @@ main .hero-area .trusted .read-more:hover {
   margin-left: 15%;
   display: flex;
   margin-top: 5vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .foot .get-in-touch {
-  width: 33.33%;
   color: white;
   text-align: left;
   padding-right: 2%;
@@ -366,11 +431,9 @@ main .hero-area .trusted .read-more:hover {
 
 .foot .get-in-touch .company {
   font-weight: bolder;
-  font-family: fantasy;
 }
 
 .foot .quick-links {
-  width: 33.33%;
   color: white;
   text-align: left;
   padding-left: 2%;
@@ -393,7 +456,6 @@ main .hero-area .trusted .read-more:hover {
 }
 
 .foot .about-xcallibur {
-  width: 33.33%;
   color: white;
   text-align: left;
   padding-left: 2%;
