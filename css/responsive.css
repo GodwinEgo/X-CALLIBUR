@@ -59,6 +59,17 @@
   .foot .quick-links {
     display: none;
   }
+
+  .card-area {
+    display: grid;
+    gap: 2rem;
+    margin-top: -120vh;
+  }
+
+  .card {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 
 /*====================TABLETS===================*/
@@ -86,6 +97,19 @@
     justify-content: center;
   }
 
+  main .hero-area p {
+    font-size: 25px;
+  }
+
+  main .hero-area h1 {
+    font-size: 50px;
+  }
+
+  main .hero-area .trusted .read-more {
+    background-color: #02adf3;
+    padding: 3vh 6vh;
+  }
+
   .menu-icon {
     display: inline-block;
   }
@@ -105,5 +129,28 @@
 
   .foot .quick-links {
     display: none;
+  }
+
+  .card-area {
+    display: grid;
+    gap: 2rem;
+    margin-top: -80vh;
+  }
+
+  .card {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width:990px) and (min-width:769px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
   }
 }
