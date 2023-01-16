@@ -30,6 +30,70 @@
     width: 60%;
   }
 
+  main .hero-area {
+    height: 75vh;
+  }
+
+  main .hero-area p {
+    font-size: 20px;
+  }
+
+  main .hero-area h1 {
+    font-size: 40px;
+  }
+
+  main .hero-area .trusted .read-more {
+    background-color: #02adf3;
+    padding: 2vh 5vh;
+  }
+
+  footer {
+    display: grid;
+  }
+
+  .foot {
+    display: grid;
+    line-height: 2;
+  }
+
+  .foot .quick-links {
+    display: none;
+  }
+}
+
+/*====================TABLETS===================*/
+@media (max-width:768px) and (min-width:501px) {
+  .navbar ul {
+    display: none;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    padding: 10% 40%;
+  }
+
+  header {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    margin: 0 !important;
+    padding: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-icon {
+    display: inline-block;
+  }
+
+  .navbar .logo img {
+    width: 60%;
+  }
+
   footer {
     display: grid;
   }
