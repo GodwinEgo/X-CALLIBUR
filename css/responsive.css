@@ -70,6 +70,43 @@
     width: 90%;
     margin-left: 5%;
   }
+
+  .working {
+    display: none;
+  }
+
+  .about {
+    display: grid;
+  }
+
+  .about_about {
+    display: grid;
+    width: 100%;
+    margin: 5%;
+    text-align: center;
+  }
+
+  .about .sub-about {
+    width: 90%;
+  }
+
+  .about .management-card {
+    width: 90%;
+    padding: 0;
+  }
+
+  .services {
+    height: auto;
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .service {
+    display: grid;
+    width: 90%;
+    margin-left: 5%;
+    gap: 2rem;
+  }
 }
 
 /*====================TABLETS===================*/
